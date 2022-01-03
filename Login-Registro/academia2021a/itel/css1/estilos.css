@@ -1,0 +1,50 @@
+/* REGISTRO*/
+nav#registro {
+float: center; /* Desplazamos el nav hacia la izquierda */
+
+}
+
+nav#registro ul {
+list-style: none;
+overflow: hidden; /* Limpiamos errores de float */
+margin: 5px 30px auto;
+background: red;
+}
+
+nav#registro ul li {
+float: left;
+font-family: Arial, sans-serif;
+font-size: 16px;
+margin: 5px;
+}
+
+nav#registro ul li a {
+display: inline-block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+padding: 5px;
+color: white;
+text-decoration: none;
+text-transform:capitalize;
+
+}
+
+nav#registro ul li:hover {
+background: green;
+}
+iframe{
+    width: 90%;
+    height: 300px;
+    border: 1px solid black;
+}
+/* REGISTRO*/
+
+
+
+ .logo {
+    margin-top: 0px;
+	position: absolute;
+	z-index: 2;
+    width: 50px;
+    margin-left: -15px;
+
+  
+}

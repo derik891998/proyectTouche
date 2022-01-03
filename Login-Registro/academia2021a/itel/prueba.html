@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="csss/jquery-ui.css">
+	<script type="text/javascript" src="jss/jquery.js"></script>
+	<script type="text/javascript" src="jss/jquery-ui.js"></script>
+	<script type="text/javascript" language="javascript">
+		$(document).ready(inicio);
+		function inicio(){
+			//$("#barra").progressbar({value:45});
+			var b = $("#barra");
+			var e = $("#etiqueta");
+			b.progressbar({
+				value: false,//sus valores vienen 0
+				change: function(){//change cambia
+					e.text(100-b.progressbar("value")+"%");//b es la barra 
+				},
+				complete: function(){
+					e.text("¡Completo!");
+					
+
+
+			$("#mensaje").dialog({
+				show:{effect:"blind",duration:1000},
+				hide:{effect:"explode", duration:1000},
+				buttons: {"Continuar": function(){location.href="http://localhost/concurso_2021/"},
+				"Cancelar": function(){location.href="index.html"},
+				Ok: function(){$(this).dialog("close")}},
+				Width:"500px",
+				modal:true});
+		
+				
+				}
+			});http://localhost/concurso_2021/
+			function progreso(){//va declara una variable v so obtiene el valor
+				var v = b.progressbar("value")||0;
+				b.progressbar("value",v+1);//el valor 
+				if(v<99){
+					setTimeout(progreso, 100);//es hace el progreso balla lento
+				}
+			}
+			setTimeout(progreso, 1000);
+		}
+
+
+
+
+
+
+
+
+
+function cambia_de_pagina(){
+    alert("Gracias por visitar nuestra pagina, nos vamos a el mirador de la serrania")
+    location.href="http://www.elmiradordelaserrania.com"
+}
+
+		
+		
+
+
+
+	</script>
+<style type="text/css">
+	#etiqueta{
+		float:left;
+		margin-left: 50%;
+		margin-top: 5px;
+		
+
+	}
+
+
+#juego{
+	width: 400px;
+	height: 250px;
+	background-color: white;
+	border: 1px solid black;
+	text-align: center;
+	margin-left: 35%;
+	margin-top: 5%;
+}
+
+#palabra1{
+	position: absolute;
+	top: 25%;
+	margin-left:45%;
+}
+
+#barra{
+	margin-top: 25%;
+	width: 600px;
+	height: 40px;
+	margin-left: 25%;
+	background-color:#80CBC4;
+}
+
+body{
+	background-color: #E0E0E0;
+}
+
+
+
+
+
+
+
+
+<style type="text/css">
+		.centra{
+			text-align: center;
+			font-weight: bold;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+
+
+
+<p id="palabra1">PAGINA</p>
+<div id="contenido"></div>
+
+<div id="barra"><div id="etiqueta">Cargando...</div></div>
+
+
+
+
+
+<div id="mensaje" title="Bienvenido">
+	<p></p><p class="centra"></p>
+</div>
+
+
+
+<div id="mandar"></div>
+
+
+
+
+
+
+<div id="botones">
+</div>
+</body>
+</html>

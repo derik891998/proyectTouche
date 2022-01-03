@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" language="javascript">
+
+
+
+$(document).ready(inicio);
+alert("BIENVENIDO")
+		function inicio(){
+			$("#boton1").alert("hola");//evento draggable hace que se mueva donde va el mas
+			$("#boton_1").alert(amigo);
+			}
+
+function amigo() {
+	alert("hola");
+		}		
+</script>
+<style type="text/css">
+			
+	#cuadro1{
+		width: 300px;
+		height: 300px;
+		background: red;
+		margin-left: 5%;
+	}	
+
+#imagen_a{
+	position: absolute;
+	top: 5%;
+	margin-left: -10%;
+	width: 150px;
+	height: 150px;
+}
+</style>
+</head>
+<body>
+
+
+
+<!--TABLA1-->	
+<center>
+<form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+<table border=3>
+<p>
+<tr bgcolor= orange>
+<td colspan=3><center> DATOS PERSONALES </center></td>
+</tr>
+<p>
+
+<td bgcolor = pink>
+Nombre:<br> <input type="text" name="name_control" placeholder="Nombre"autofocus required /> <br><br>
+Apellido:<br> <input type="text" name="apel_control" placeholder="Apellidos"/> <br><br>
+Dirección:<br> <input type="text" name="dire_control" placeholder="Dirección"/> <br><br>
+Teléfono:<br> <input type="tel" name="tel_control" /> <br><p>
+DNI:<br> <input type="tel" name="dni_control" /> <br><p>
+Email:<br> <input type="email" name="email_control" required /> <br><br>
+Fecha_Nacim:<br> <input type="date" name="date_control" /> <br><br>
+Tiempo: <br> <input type="time" name="time_control" /> <br><br>
+</td>
+</p>
+<!--TABLA1-->
+
+<!--TABLA2-->
+
+<td bgcolor = skyblue>
+Fecha-hora Registro:<br>  <input type="text" name="name_control" placeholder="Nombre"autofocus required /> <br><br>
+Mes:<br> <input type="month" name="month_control" /> <br>
+<br>Semana:<br> <input type="month" name="month_control" /> <br>
+<br>Número (min -10, max 10):<br> <input type="number" name="number_control" min="-10" max="10" value="0" /> <br>
+<br>URL: <br><input type="url" name="url_control" /> <br>
+<br>Término de búsqueda: <input type="search" name="search_control" /> <br>
+<br>Color Favorito: <br><input type="color" name="color_control" /> <br>
+<br>Intervalo (min 0, max 10):<br><br> <input type="range" name="range_control" min="0" max="10" value="0" />
+<output for="range_control" name="range_control_value" >0</output> <br>
+<!--
+<p>
+<td id="contenido2" bgcolor= skyblue>	
+
+Fecha-hora Registro:<br> <input type="datetime" name="datetime_control"/><br>
+Mes:<br> <input type="month" name="month_control" /> <br>
+Semana: <br> <input type="week" name="week_control" /> <br>
+Número (min -10, max 10): <input type="number" name="number_control" min="-10" max="10" value="0" /> <br>
+URL: <input type="url" name="url_control" /> <br>
+Término de búsqueda: <input type="search" name="search_control" /> <br>
+Color Favorito: <input type="color" name="color_control" /> <br>
+Intervalo (min 0, max 10): <input type="range" name="range_control" min="0" max="10" value="0" />
+<output for="range_control" name="range_control_value" >0</output> <br>
+</td>
+<!--TABLA2-->
+
+
+<!--TABLA3-->
+
+<td bgcolor="#3BF4F7">
+	
+<FORM method="post" action="tratamiento.php">
+<p>
+Marca las comidas que te gustan<br>
+
+<input type="checkbox" name="opciones" checked >Patatas fritas</label><br>
+<input type="checkbox" name="opciones" checked >Hamburguesa</label><br>
+<input type="checkbox" name="opciones" checked >Espinaca</label><br>
+<input type="checkbox" name="opciones" checked >Ostras</label><br>
+
+<input type="radio" name="edad" value="entre15-25" id="entre15-25" /> <label for="entre15-25">Menos de  15 años</label><br>
+<input type="radio" name="edad" value="entre15-25" id="entre15-25" /> <label for="entre15-25">Entre 15 y 25 años</label><br>
+<input type="radio" name="edad" value="entre25-40" id="entre25-40" /> <label for="entre25-40">Entre 25 y 40 años</label><br>
+<input type="radio" name="edad" value="mas40" id="mas40" /> <label for="mas40">¿Incluso mayor?</label>
+</p>
+
+<p>
+<input type="radio" name="edad" value="entre15-25" id="entre15-25" /> <label for="entre15-25">Europa</label><br>
+<input type="radio" name="edad" value="entre15-25" id="entre15-25" /> <label for="entre15-25">Africa</label><br>
+<input type="radio" name="edad" value="entre25-40" id="entre25-40" /> <label for="entre25-40">Asia</label><br>
+<input type="radio" name="edad" value="entre25-40" id="entre25-40" /> <label for="entre25-40">America</label><br>
+<input type="radio" name="edad" value="mas40" id="mas40" /> <label for="mas40">Australia</label>
+
+<FORM method="post" action="tratamiento.php">
+<p>
+<label for="pais">¿En qué país vives?</label><br>
+<select name="pais" id="pais">
+<optgroup label="Europa">
+<option value="suiza">Suiza</option>
+<option value="francia">Francia</option>
+<option value="espana">España</option>
+<option value="italia">Italia</option>
+</optgroup>
+<optgroup label="América">
+<option value="peru">Peru</option>
+<option value="canada">Canadá</option>
+</optgroup>
+<optgroup label="Asia">
+<option value="china">China</option>
+<option value="japon">Japón</option>
+</optgroup>
+</select>
+</p>
+</FORM>
+<p>
+</td>
+</tr>
+<p>
+<!--TABLA3-->
+<td>
+	</td>
+</tr>
+<p>
+
+
+
+	
+<tr>
+<td colspan=2>
+¿Cómo crees que podría mejorar mi página web?
+<br>
+
+<textarea name="mejora" id="mejora" rows="5" cols="60">
+	¡¿Mejorar tu página web?!
+¡Venga! ¡Es tan perfecta que no necesita ninguna mejora
+!
+</textarea>
+</td>
+</tr>
+</table>
+
+<input type="submit" value="Submit!" />
+</form>
+
+</section>
+
+
+
+<button onclick  ="location.href='prueba.html'"><input type="submit" name="Submit!">  </button>
+
+
+
+</button>
+
+
+</body>
+</html>

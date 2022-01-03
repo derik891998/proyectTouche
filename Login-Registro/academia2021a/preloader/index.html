@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="main.css">  
+      
+<!--    <link rel="stylesheet" href="preloaderCSSpuro.css">  -->
+      
+    <link rel="shortcut icon" href="#" />  
+    
+      
+    <!-- Plugin Animated Circles CSS -->  
+    <link rel="stylesheet" href="plugin_animated_circles/css/gspinner.css">    
+    
+    <!-- Plugin introLoader CSS -->    
+    <link rel="stylesheet" href="plugin_IntroLoader/css/introLoader.min.css">
+      
+    <title>Tutoriales - Informática DP</title>
+  </head>
+  <body> 
+     <header>
+         <h1 class="text-center text-light">Tutorial</h1>
+         <h2 class="text-center text-light">Cómo implementar un <span style="color:#00BCD4">PRE LOADER</span></h2> 
+      </header>
+     
+    <!--Loader con CSS Puro-->
+      <!--<div id="loader"></div>-->
+      
+    <!--Plugin animated_cicles_spinner-->  
+    <div id="contenedor-loader">
+        <div id="loader"></div>  
+    </div>
+      
+    <!--Plugin introLoader -->    
+    <!--<div id="element" class="introLoading"></div>-->
+      
+      
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>      
+    
+     <!-- Plugin Animated Circles JS -->  
+    <script src="plugin_animated_circles/js/g-spinner.js"></script>  
+      
+    <!-- Plugin introLoader JS -->      
+    <script src="plugin_IntroLoader/js/jquery.introLoader.pack.min.js"></script>
+      
+    <script type="text/javascript">     
+    //Loader con CSS Puro    
+        //El evento onload se ejecuta cuando se carga completamente la página
+        /*window.onload = function(){          
+            $("#loader").fadeOut(2000); //ocultamos la imagen de pre-carga cuando la página ha terminado de cargar    
+        }  */   
+    
+    //Loader con plugin animated_cicles_spinner    
+        var $loader = $("#loader");  //referenciamos el div #loader  
+        $loader.gSpinner();   //iniciamos la carga    
+
+        window.onload = function(){                                               
+        setTimeout(function(){
+            $("#contenedor-loader").fadeOut();
+            $loader.gSpinner("hide")            
+        },3000);                                      
+        };
+            
+    
+    //Loader con plugin introLoader    
+        //Ejemplo - 1 básico
+        /*$("#element").introLoader({
+            animation: {
+                name: 'simpleLoader', //nombre de la animación
+                options: {
+                    exitFx:'slideDown', //efecto de salida de la animación
+                    ease: "easeOutSine",
+                    style: 'ocean', //estilos de colores
+                    delayBefore: 10000, //tiempo en ms que dura la animación, luego de que se cargó la página
+                    exitTime: 500 //tiempo en ms que dura la animación de salida                   
+                }
+            },    
+            spinJs: {
+                lines: 13, // The number of lines to draw
+                length: 20, // The length of each line
+                width: 10, // The line thickness
+                radius: 30, // The radius of the inner circle
+                corners: 1, // Corner roundness (0..1)
+                color: '#fff', // #rgb or #rrggbb or array of colors
+            }
+        });*/
+        
+        //Ejemplo - 2 con porcentajes
+        /*$("#element").introLoader({
+            animation: {
+                name: 'counterLoader',
+                options: {
+                    ease: "easeOutSine",
+                    style: 'dark',
+                    animationTime: 1000
+                }
+            }
+        });*/
+    </script>        
+  </body>
+</html>

@@ -1,0 +1,63 @@
+
+header, .alert{
+  z-index: 100;
+      background: linear-gradient(to right, #61ba6d, #83c331);
+
+  
+    
+}
+.description{
+  height: 25px;
+  overflow: hidden;
+  transition: height .3s ease-in .3s;
+    border: 1px solid #61ba6d ;
+    
+    
+    
+}
+.description:hover{
+  height: 80px;
+          background: linear-gradient(to right, #61ba6d, #83c331);
+
+    
+    
+}
+.carrito{
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+
+    
+    
+}
+
+
+
+
+.table__productos{
+  display: flex;
+              background: linear-gradient(to right, #61ba6d, #83c331);
+
+       
+}
+.table__productos > img{
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.table__cantidad > input{
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+          background: linear-gradient(to right, #61ba6d, #83c331);
+
+}
+.hide, .remove{
+  display: none;
+}
